@@ -1,4 +1,3 @@
-import * as signupForm from '../../util/SignupFormValidation';
 
 export const usernameChangedHandler = (usernameValue) => {
 
@@ -56,30 +55,33 @@ export const initSignupHandler = (state, navigation) => {
             username: userNameField.value,
             email: emailField.value,
             password: passwordField.value
-        }
+        };
 
         console.log(userData);
 
-        fetch('http://localhost:3000/register', {
+        // fetch('/*YOUR REGISTERATION ENDPOINT*/', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Accept': 'application/json, text/plain, */*',
+        //         'Content-Type': 'application/json'
+        //     },
+        //     body: JSON.stringify(userData)
+        // })
+        // .then(res => res.json())
+        // .then(res => { 
+        //        console.log(res) 
+        //        /* dispatch SIGNUP_BUTTON::PRESSED action HERE */
+        // }).catch(e => console.log(e));
 
-            method: 'POST',
-            headers: {
-
-                'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(userData)
-        })
-        .then(res => res.json())
-        .then(res => console.log(res))
-        .catch(e => console.log(e));
-
+        // action dispatch for demonstration:
         setTimeout(() => {
             dispatch({
 
                 type: 'SIGNUP_BUTTON::PRESSED'
             });
             navigation.navigate('MainScreen');
-        }, 4000);
+        }, 2000);
+
+
     };
 };

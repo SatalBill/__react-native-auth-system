@@ -36,7 +36,6 @@ class SignupScreen extends Component {
                     backgroundColor: 'transparent'
                 }}>
 
-
                     <CustomFormInput
                         label={'Username'}
                         onChangeText={(text) => this.props.usernameChanged(text)}

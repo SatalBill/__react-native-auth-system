@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { 
     View,
+    Image,
     Dimensions,
     StyleSheet
 } from 'react-native';
@@ -26,11 +27,20 @@ class WelcomeScreen extends Component {
 
         return (
             <View style={styles.container}>
+
+                <Image blurRadius={0} source={{ uri: 'https://www.indeedcare.com/site/wp-content/uploads/2014/02/2252.jpg' }} style={styles.backgroundImageStyles} />
+
+                <View style={{ flex: 4, alignItems: 'center', justifyContent: 'center', backgroundColor: 'transparent', width: width * 1.0 }}>
+                    <Image blurRadius={0} source={{ uri: 'https://cdn2.iconfinder.com/data/icons/social-media-8/512/Chrome.png' }} style={styles.companyLogoStyles} />                    
+                </View>
                 <View style={{
 
-                    width: width * 0.98,
-                    // backgroundColor: 'rgba(10,10,10,0.4)',
-                    padding: 10
+                    // marginTop: height * 0.75,
+                    flex: 1,
+                    width: width * 1.0,
+                    backgroundColor: 'transparent',
+                    paddingVertical: 16,
+                    justifyContent: 'space-around'
                 }}>
 
                     <Button
@@ -42,11 +52,11 @@ class WelcomeScreen extends Component {
                         titleStyle={{ fontWeight: '700' }}
                         buttonStyle={{
 
-                            backgroundColor: 'rgba(92, 99,216, 1)',
+                            backgroundColor: 'rgba(10,10,10,0.4)',
                             borderColor: '#fff',
                             borderWidth: 0,
+                            height: height * 0.09,
                             borderRadius: 10,
-                            marginTop: height * 0.02
                         }}
                         containerStyle={{ marginTop: 20 }}
                     />
@@ -60,9 +70,10 @@ class WelcomeScreen extends Component {
                         titleStyle={{ fontWeight: '700' }}
                         buttonStyle={{
 
-                            backgroundColor: 'rgba(92, 99,216, 1)',
+                            backgroundColor: 'rgba(10, 10, 10, 0.4)',
                             borderColor: '#fff',
                             borderWidth: 0,
+                            height: height * 0.09,
                             borderRadius: 10,
                             marginTop: height * 0.02
                         }}
@@ -80,9 +91,24 @@ const styles = StyleSheet.create({
     container: {
 
         flex:1,
-        alignItems:'center',
-        justifyContent:'center',
-        backgroundColor: 'rgba(10,10,10,1)'
+        alignItems: 'center',
+        backgroundColor: 'rgba(10, 10, 10, 1)'
+    },
+    backgroundImageStyles: {
+
+        position: 'absolute',
+        // top: height * 0.080,
+        height: height * 1.0,
+        width: width * 1.0
+    },
+    companyLogoStyles: {
+
+        height: height * 0.44,
+        width: width * 0.60,
+        borderTopRightRadius: 80,
+        borderTopLeftRadius: 80,
+        borderBottomRightRadius: 80,
+        borderBottomLeftRadius: 80
     }
 });
 
