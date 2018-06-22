@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { 
     View,
-    Text,
-    TouchableOpacity,
     Dimensions,
     StyleSheet
 } from 'react-native';
 
 import { Button } from 'react-native-elements';
-import CustomButtonTouchables from '../containers/CustomButtonTouchables';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 const { height, width } = Dimensions.get('window');
 
@@ -39,6 +37,7 @@ class WelcomeScreen extends Component {
                         onPress={this._navigateToLogin}
                         title='Login'
                         large
+                        iconComponent={Ionicons}
                         icon={{ name: 'ios-log-in', type: 'ionicon' }}
                         titleStyle={{ fontWeight: '700' }}
                         buttonStyle={{
@@ -56,6 +55,7 @@ class WelcomeScreen extends Component {
                         onPress={this._navigateToSignup}
                         title='Signup'
                         large
+                        iconComponent={Ionicons}
                         icon={{ name: 'ios-add', type: 'ionicon' }}
                         titleStyle={{ fontWeight: '700' }}
                         buttonStyle={{

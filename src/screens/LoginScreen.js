@@ -7,8 +7,6 @@ import {
     StyleSheet
 } from 'react-native';
 import { Button, FormLabel, FormInput, FormValidationMessage } from 'react-native-elements';
-import CustomTextInput from '../containers/CustomTextInput';
-import CustomButtonTouchables from '../containers/CustomButtonTouchables';
 import CustomFormInput from '../containers/CustomFormInput';
 
 const { height, width } = Dimensions.get('window');
