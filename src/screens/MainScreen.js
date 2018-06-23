@@ -10,6 +10,13 @@ import { Font } from 'expo';
 
 const { height, width } = Dimensions.get('window');
 
+/**
+ * @name MainScreen.js
+ * @type { Stateful Component }
+ * @prop { none }
+ * @description  This is the component for main screen of the app. Can be modified accordingly.
+ */
+
 class MainScreen extends Component {
 
     state = {

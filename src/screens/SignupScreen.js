@@ -20,6 +20,13 @@ import { usernameChangedHandler,
 
 const { height, width } = Dimensions.get('window');
 
+/**
+ * @name SignupScreen.js
+ * @type { Stateful Component }
+ * @prop { none }
+ * @description  component for signup screen of the app.
+ */
+
 class SignupScreen extends Component {
 
     state = {

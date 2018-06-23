@@ -9,16 +9,23 @@ const asyncReducer = (state = initialState, action) => {
 
     switch (action.type) {
 
-        case 'TEST::ACTION_REQUEST':
-            
-            console.log('IS loaded set to true.');
+        case 'ASYNC::FETCH':
+
+            // Sample action for your application.
 
             return {
 
                 ...state,
                 isLoaded: true
             };
-    
+        case 'RESET::APPLICATION_DATA': 
+
+            // Reset application data.
+            return {
+
+                ...initialState
+            };
+
         default:
             return state;
     }

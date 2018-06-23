@@ -1,3 +1,13 @@
+/**
+ * @name FormValidation.js
+ * @type { function }
+ * @param { * } data
+ * @returns { Boolean } 
+ * @description This file contains all validation related stuff,
+ *              every function returns a boolean which signifies
+ *              if the field is valid or not.
+ */
+
 export const isUsernameValid = (username) => {
 
    return !username.includes(' ');
@@ -11,7 +21,7 @@ export const isEmailValid = (email) => {
 
 export const isPasswordValid = (password) => {
 
-    //add custom valdation
+    // Add custom valdation if required.
     return true;
 };
 
@@ -36,11 +46,9 @@ export const isFormValid = (state) => {
         && passwordField.value !== ''
         && confirmPasswordField.value !== '')) {
 
-        console.log('Full form is valid');
         return false;
     } else {
         
-        console.log('Full form is NOT valid.');
         return true;
     };
 }

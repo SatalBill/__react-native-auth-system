@@ -18,6 +18,13 @@ import { usernameChangedHandler,
 
 const { height, width } = Dimensions.get('window');
 
+/**
+ * @name LoginScreen.js
+ * @type { Stateful Component }
+ * @prop { none }
+ * @description  component for login screen of the app.
+ */
+
 class LoginScreen extends Component {
 
     state = {

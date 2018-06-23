@@ -37,8 +37,6 @@ const signupDetailsReducer = (state = initialState, action) => {
 
         case 'USERNAME_TEXTINPUT::CHANGED':
 
-            console.log('USERNAME VALID: ' + formValidation.isUsernameValid(action.usernameValue));
-
             return {
 
                 ...state,
@@ -61,8 +59,6 @@ const signupDetailsReducer = (state = initialState, action) => {
             };
 
         case 'EMAIL_TEXTINPUT::CHANGED':
-
-            console.log('EMAIL VALID: ' + formValidation.isEmailValid(action.emailValue));      
 
             return {
 
@@ -110,8 +106,6 @@ const signupDetailsReducer = (state = initialState, action) => {
 
         case 'CONFIRMPASSWORD_TEXTINPUT::CHANGED':
 
-            console.log('DO PASS MATCH :', formValidation.doPasswordMatch(state.passwordField.value, action.confirmPasswordValue));
-
             return {
 
                 ...state,
@@ -145,6 +139,8 @@ const signupDetailsReducer = (state = initialState, action) => {
 
         case 'SIGNUP_BUTTON::PRESSED': 
 
+            // Handle signup action here.
+
             return {
 
                 ...state,
@@ -154,6 +150,7 @@ const signupDetailsReducer = (state = initialState, action) => {
 
         case 'RESET::APPLICATION_DATA':
 
+            // Reset signup form data.
             return {
 
                 ...initialState

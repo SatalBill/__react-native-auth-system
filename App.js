@@ -1,11 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
 import { Provider } from 'react-redux';
 import configureStore from './src/store/configureStore'
 import LoginAppNavigator from './src/config/routes';
 
 const store = configureStore();
+
+/**
+ * @name App.js
+ * @type { Stateful Component }
+ * @author KARAN PRATAP SINGH
+ * @requires Expo,Redux,React-Navigation
+ * @description This is a ready to use login system app/boilerplate with
+ *              full redux integration to get your project started.
+ */
 
 export default class App extends React.Component {
 
@@ -18,14 +25,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-
-  container: {
-    
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-});

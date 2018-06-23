@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, Animated, Easing, Dimensions, Text } from 'react-native';
+import { Animated, Easing } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
 import WelcomeScreen from '../screens/WelcomeScreen';
@@ -13,7 +13,7 @@ const transitionConfig = () => {
 
         transitionSpec: {
 
-            duration: 400, // TODO: adjust for production.
+            duration: 400,
             easing: Easing.out(Easing.poly(4)),
             timing: Animated.timing,
             useNativeDriver: true,
@@ -57,7 +57,7 @@ const LoginAppNavigator = new createStackNavigator({
 
 }, {
 
-    headerMode: 'none', // StackNavigator header.
+    headerMode: 'none',
     navigationOptions: {
 
         gesturesEnabled: true

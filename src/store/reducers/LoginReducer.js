@@ -24,8 +24,6 @@ const loginReducer = (state = initialState, action) => {
 
         case 'LOGIN_USERNAME_TEXTINPUT::CHANGED':
 
-            console.log('Username validation: ' + formValidation.isUsernameValid(action.usernameValue));
-
             return {
 
                 ...state,
@@ -38,8 +36,6 @@ const loginReducer = (state = initialState, action) => {
             };
 
         case 'LOGIN_PASSWORD_TEXTINPUT::CHANGED':
-
-            console.log('Password validation: ' + formValidation.isPasswordValid(action.passwordValue));
 
             return {
 
@@ -63,6 +59,8 @@ const loginReducer = (state = initialState, action) => {
 
         case 'LOGIN_BUTTON::PRESSED':
 
+            // Handle login action here.
+
             return {
 
                 ...state,
@@ -71,6 +69,8 @@ const loginReducer = (state = initialState, action) => {
             };
 
         case 'RESET::APPLICATION_DATA':
+
+            // Reset login form data.
 
             return {
 

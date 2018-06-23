@@ -59,6 +59,9 @@ export const initSignupHandler = (state, navigation) => {
 
         console.log(userData);
 
+
+        // Sample registration request: 
+        
         // fetch('/*YOUR REGISTERATION ENDPOINT*/', {
         //     method: 'POST',
         //     headers: {

@@ -9,6 +9,14 @@ import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elemen
 
 const { height, width } = Dimensions.get('window');
 
+/**
+ * @name FormInput.js
+ * @type { Stateful Component }
+ * @prop { label, secure, onChangeText, placeholderText, hasError, errorMessage }
+ * @requires React-Native-Elements
+ * @description  This is the component for form fields.
+ */
+
 class FormInputX extends Component {
 
     state = {
@@ -26,7 +34,7 @@ class FormInputX extends Component {
     };
 
     render() {
-        // TODO: Connect form error management.
+
         return (
 
             <View style={styles.container}>

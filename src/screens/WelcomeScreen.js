@@ -11,6 +11,13 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { resetApplicationStateHandler } from '../store/actions/asycActionCreator';
 const { height, width } = Dimensions.get('window');
 
+/**
+ * @name WelcomeScreen.js
+ * @type { Stateful Component }
+ * @prop { none }
+ * @description This is the component for welcome screen of the app.
+ */
+
 class WelcomeScreen extends Component {
 
     constructor(props) {
