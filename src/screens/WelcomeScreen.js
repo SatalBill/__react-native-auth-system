@@ -28,7 +28,7 @@ class WelcomeScreen extends Component {
         return (
             <View style={styles.container}>
 
-                <Image blurRadius={0} source={{ uri: 'https://www.indeedcare.com/site/wp-content/uploads/2014/02/2252.jpg' }} style={styles.backgroundImageStyles} />
+                <Image blurRadius={0} source={require('../../assets/images/mainscreen_background.jpg')} style={styles.backgroundImageStyles} />                
 
                 <View style={{ flex: 4, alignItems: 'center', justifyContent: 'center', backgroundColor: 'transparent', width: width * 1.0 }}>
                     <Image blurRadius={0} source={{ uri: 'https://cdn2.iconfinder.com/data/icons/social-media-8/512/Chrome.png' }} style={styles.companyLogoStyles} />                    

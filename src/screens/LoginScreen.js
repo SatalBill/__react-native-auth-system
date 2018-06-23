@@ -47,7 +47,7 @@ class LoginScreen extends Component {
         return (
             <View style={styles.container}>
             
-                <Image blurRadius={0} source={{ uri: 'https://stmed.net/sites/default/files/turquoise-blur-wallpapers-25329-9997933.jpg' }} style={styles.backgroundImageStyles} />
+                <Image blurRadius={0} source={require('../../assets/images/mainscreen_background.jpg')} style={styles.backgroundImageStyles} />
 
                 <View style={{
 

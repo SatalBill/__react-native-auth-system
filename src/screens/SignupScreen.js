@@ -46,7 +46,7 @@ class SignupScreen extends Component {
         return (
             <View style={styles.container}>
 
-                <Image blurRadius={0} source={{ uri: 'https://stmed.net/sites/default/files/turquoise-blur-wallpapers-25329-9997933.jpg' }} style={styles.backgroundImageStyles} />
+                <Image blurRadius={0} source={require('../../assets/images/mainscreen_background.jpg')} style={styles.backgroundImageStyles} />
 
                 <View style={{
 
@@ -140,7 +140,6 @@ const styles = StyleSheet.create({
     backgroundImageStyles: {
 
         position: 'absolute',
-        // top: height * 0.080,
         height: height * 1.0,
         width: width * 1.0
     }
