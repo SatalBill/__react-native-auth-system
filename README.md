@@ -16,8 +16,9 @@
 
 ## Demonstration : (click to play)
 
-[![Demo-Here](URL.gif)](RedirectURL "Recipes-MainScreen")
-[![Demo-Here](URL.gif)](RedirectURL "Recipes-MainScreen")
+[![iOS-Demo](https://media.giphy.com/media/3mJwqv7HgGStgd3WfS/giphy.gif)](RedirectURL "iOS-Demo")
+
+[![Android-Demo](https://media.giphy.com/media/39n8oe7AiNEyVvgCP5/giphy.gif)](RedirectURL "Android-Demo")
  
 ### View on Expo via QR Code: (click below)
 

@@ -1,8 +1,8 @@
 {
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 9507,
-  "expoServerNgrokUrl": "https://ca-sp9.karanpratapsingh.react-native-auth-system.exp.direct",
-  "packagerNgrokUrl": "https://packager.ca-sp9.karanpratapsingh.react-native-auth-system.exp.direct",
-  "ngrokPid": 9521
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
