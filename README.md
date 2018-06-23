@@ -19,7 +19,7 @@
 ### iOS:
 [![iOS-Demo](https://media.giphy.com/media/3mJwqv7HgGStgd3WfS/giphy.gif)](RedirectURL "iOS-Demo")
 
-### Android:
+### Android: 
 [![Android-Demo](https://media.giphy.com/media/pcKkoKaguHwbtsIqC5/giphy.gif)](RedirectURL "Android-Demo")
  
 ### View on Expo via QR Code: (click below)
