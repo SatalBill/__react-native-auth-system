@@ -1,10 +1,12 @@
+import formValidation from '../../util/FormValidation';
+
 const initialState = {
 
     userNameField: {
 
         value: '',
         hasError: false,
-        errorMessage: ''
+        errorMessage: 'username is not valid'
     },
     passwordField: {
 
@@ -19,15 +21,34 @@ const loginReducer = (state = initialState, action) => {
 
     switch (action.type) {
 
-        case 'TEST::ACTION_CHANGE_TEXT_LOGIN':
+        case 'LOGIN_USERNAME_TEXTINPUT::CHANGED':
 
-            console.log('Changing text login reducer.');
+            console.log('Username validation: ' + formValidation.isUsernameValid(action.usernameValue));
 
             return {
 
                 ...state,
-                userName: '' + action.username,
-                password: '' + action.password
+                userNameField: {
+
+                    ...state.userNameField,
+                    value: action.usernameValue,
+                    isValid: formValidation.isUsernameValid(action.usernameValue)
+                }
+            };
+
+        case 'LOGIN_PASSWORD_TEXTINPUT::CHANGED':
+
+            console.log('Password validation: ' + formValidation.isPasswordValid(action.passwordValue));
+
+            return {
+
+                ...state,
+                passwordField: {
+
+                    ...state.passwordField,
+                    value: action.passwordValue,
+                    isValid: formValidation.isPasswordValid(action.passwordValue)
+                }
             };
 
         default:

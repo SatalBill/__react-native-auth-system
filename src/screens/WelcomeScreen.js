@@ -75,7 +75,8 @@ class WelcomeScreen extends Component {
                             borderWidth: 0,
                             height: height * 0.09,
                             borderRadius: 10,
-                            marginTop: height * 0.02
+                            marginTop: height * 0.02,
+                            paddingLeft: 36
                         }}
                         containerStyle={{ marginTop: 20 }}
                     />

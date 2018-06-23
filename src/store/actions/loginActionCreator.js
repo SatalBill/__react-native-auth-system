@@ -1,9 +1,17 @@
-export const loginActionCreator = () => {
+export const usernameChangedHandler = (usernameValue) => {
 
     return {
 
-        action: 'TEST::ACTION_CHANGE_TEXT_LOGIN',
-        username: 'something',
-        password: 'asfdjklasf'
+        action: 'LOGIN_USERNAME_TEXTINPUT::CHANGED',
+        usernameValue
+    };
+};
+
+export const passwordChangedHandler = (passwordValue) => {
+
+    return {
+
+        action: 'LOGIN_PASSWORD_TEXTINPUT::CHANGED',
+        passwordValue
     };
 };

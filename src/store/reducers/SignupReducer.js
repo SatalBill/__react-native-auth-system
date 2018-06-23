@@ -1,4 +1,4 @@
-import * as signupForm from '../../util/SignupFormValidation';
+import * as formValidation from '../../util/FormValidation';
 
 const initialState = {
 
@@ -37,7 +37,7 @@ const signupDetailsReducer = (state = initialState, action) => {
 
         case 'USERNAME_TEXTINPUT::CHANGED':
 
-            console.log('USERNAME VALID: ' + signupForm.isUsernameValid(action.usernameValue));
+            console.log('USERNAME VALID: ' + formValidation.isUsernameValid(action.usernameValue));
 
             return {
 
@@ -46,23 +46,23 @@ const signupDetailsReducer = (state = initialState, action) => {
 
                     ...state.userNameField,
                     value: action.usernameValue,
-                    isValid: signupForm.isUsernameValid(action.usernameValue)
+                    isValid: formValidation.isUsernameValid(action.usernameValue)
                  },
-                buttonDisabled: signupForm.isFormValid({
+                buttonDisabled: formValidation.isFormValid({
 
                     ...state,
                     userNameField: {
 
                         ...state.userNameField,
                         value: action.usernameValue,
-                        isValid: signupForm.isUsernameValid(action.usernameValue)
+                        isValid: formValidation.isUsernameValid(action.usernameValue)
                     }
                 })      
             };
 
         case 'EMAIL_TEXTINPUT::CHANGED':
 
-            console.log('EMAIL VALID: ' + signupForm.isEmailValid(action.emailValue));      
+            console.log('EMAIL VALID: ' + formValidation.isEmailValid(action.emailValue));      
 
             return {
 
@@ -71,16 +71,16 @@ const signupDetailsReducer = (state = initialState, action) => {
 
                     ...state.emailField,
                     value: action.emailValue,
-                    isValid: signupForm.isEmailValid(action.emailValue)
+                    isValid: formValidation.isEmailValid(action.emailValue)
                 },
-                buttonDisabled: signupForm.isFormValid({
+                buttonDisabled: formValidation.isFormValid({
 
                     ...state,
                     emailField: {
 
                         ...state.emailField,
                         value: action.emailValue,
-                        isValid: signupForm.isEmailValid(action.emailValue)
+                        isValid: formValidation.isEmailValid(action.emailValue)
                     }
                 })                      
             };
@@ -94,23 +94,23 @@ const signupDetailsReducer = (state = initialState, action) => {
 
                     ...state.passwordField,
                     value: action.passwordValue,
-                    isValid: signupForm.isPasswordValid(action.passwordValue)
+                    isValid: formValidation.isPasswordValid(action.passwordValue)
                 },
-                buttonDisabled: signupForm.isFormValid({
+                buttonDisabled: formValidation.isFormValid({
                     
                     ...state,
                     passwordField: {
 
                         ...state.passwordField,
                         value: action.passwordValue,
-                        isValid: signupForm.isPasswordValid(action.passwordValue)
+                        isValid: formValidation.isPasswordValid(action.passwordValue)
                     }
                 })                      
             };
 
         case 'CONFIRMPASSWORD_TEXTINPUT::CHANGED':
 
-            console.log('DO PASS MATCH :', signupForm.doPasswordMatch(state.passwordField.value, action.confirmPasswordValue));
+            console.log('DO PASS MATCH :', formValidation.doPasswordMatch(state.passwordField.value, action.confirmPasswordValue));
 
             return {
 
@@ -119,16 +119,16 @@ const signupDetailsReducer = (state = initialState, action) => {
 
                     ...state.confirmPasswordField,
                     value: action.confirmPasswordValue,
-                    isValid: signupForm.doPasswordMatch(state.passwordField.value, action.confirmPasswordValue)
+                    isValid: formValidation.doPasswordMatch(state.passwordField.value, action.confirmPasswordValue)
                 },
-                buttonDisabled: signupForm.isFormValid({
+                buttonDisabled: formValidation.isFormValid({
                     
                     ...state,
                     confirmPasswordField: {
 
                         ...state.confirmPasswordField,
                         value: action.confirmPasswordValue,
-                        isValid: signupForm.doPasswordMatch(state.passwordField.value, action.confirmPasswordValue)
+                        isValid: formValidation.doPasswordMatch(state.passwordField.value, action.confirmPasswordValue)
                     }
                 })                
             };
