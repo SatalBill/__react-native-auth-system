@@ -7,7 +7,7 @@ import {
     StyleSheet
 } from 'react-native';
 import { connect } from 'react-redux';
-import { Font, Expo } from 'expo';
+import { Font } from 'expo';
 import { Button } from 'react-native-elements';
 import FormInput from '../containers/FormInput';
 import { usernameChangedHandler,

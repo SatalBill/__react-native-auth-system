@@ -1,17 +1,17 @@
-import formValidation from '../../util/FormValidation';
+import * as formValidation from '../../util/FormValidation';
 
 const initialState = {
 
     userNameField: {
 
         value: '',
-        hasError: false,
+        isValid: true,
         errorMessage: 'username is not valid'
     },
     passwordField: {
 
         value: '',
-        hasError: false,
+        isValid: true,
         errorMessage: ''
     },
     isLoading: false

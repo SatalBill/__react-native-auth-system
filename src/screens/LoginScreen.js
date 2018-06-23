@@ -7,9 +7,11 @@ import {
     Platform,
     StyleSheet
 } from 'react-native';
+import { connect } from 'react-redux';
 import { Font } from 'expo';
 import { Button } from 'react-native-elements';
 import FormInput from '../containers/FormInput';
+import { usernameChangedHandler, passwordChangedHandler } from '../store/actions/loginActionCreator';
 
 const { height, width } = Dimensions.get('window');
 
@@ -63,15 +65,21 @@ class LoginScreen extends Component {
 
                 
                     <FormInput
-                        label={'Username'} 
-                        placeholderText={'Enter your username'} 
-                        hasError errorMessage={'Not Correct'} />
+                        label={'Username'}
+                        onChangeText={(text) => this.props.usernameChanged(text)}
+                        placeholderText={'Enter your username'}
+                        hasError={this.props.localState.userNameField.isValid}
+                        errorMessage={this.props.localState.userNameField.errorMessage}
+                    />
 
-                    <FormInput 
+                    <FormInput
                         secure
-                        label={'Password'} 
-                        placeholderText={'Enter your password'} 
-                        hasError errorMessage={'Not Correct'} />
+                        label={'Password'}
+                        onChangeText={(text) => this.props.passwordChanged(text)}
+                        placeholderText={'Enter your password'}
+                        hasError={this.props.localState.passwordField.isValid}
+                        errorMessage={this.props.localState.passwordField.errorMessage}
+                    />
                         
                     <Button
                         title='Loging In'
@@ -112,4 +120,21 @@ const styles = StyleSheet.create({
     }
 });
 
-export default LoginScreen;
+const mapStateToProps = (state) => {
+
+    return {
+
+        localState: state.loginData
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+
+    return {
+
+        usernameChanged: (value) => dispatch(usernameChangedHandler(value)),
+        passwordChanged: (value) => dispatch(passwordChangedHandler(value)),
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen);
