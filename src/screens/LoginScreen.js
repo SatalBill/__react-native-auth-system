@@ -4,7 +4,7 @@ import {
     Text,
     Image,
     Dimensions,
-    Platform,
+    ScrollView,
     StyleSheet
 } from 'react-native';
 import { connect } from 'react-redux';
@@ -48,7 +48,7 @@ class LoginScreen extends Component {
             <View style={styles.container}>
             
                 <Image blurRadius={0} source={require('../../assets/images/mainscreen_background.jpg')} style={styles.backgroundImageStyles} />
-
+                <ScrollView>
                 <View style={{
 
                     flex: 1,
@@ -102,7 +102,6 @@ class LoginScreen extends Component {
                         titleStyle={{ fontWeight: '700' }}
                         buttonStyle={{
 
-                            // backgroundColor: 'rgba(92, 99,216, 1)',
                             backgroundColor: 'rgba(10, 10, 10,  0.4)',
                             borderColor: '#fff',
                             borderWidth: 0,
@@ -110,6 +109,7 @@ class LoginScreen extends Component {
                             marginTop: height * 0.06                            
                         }} />
                 </View>
+                </ScrollView>
             </View>
         );
     }
@@ -127,7 +127,6 @@ const styles = StyleSheet.create({
     backgroundImageStyles: {
 
         position: 'absolute',
-        // top: height * 0.080,
         height: height * 1.0,
         width: width * 1.0
     }

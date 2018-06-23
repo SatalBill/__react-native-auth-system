@@ -152,6 +152,13 @@ const signupDetailsReducer = (state = initialState, action) => {
                 buttonLabel: 'Sign Up' 
             };
 
+        case 'RESET::APPLICATION_DATA':
+
+            return {
+
+                ...initialState
+            };
+
         default:
             return state;
     }

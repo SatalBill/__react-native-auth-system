@@ -3,6 +3,7 @@ import {
     View,
     Text,
     Image,
+    ScrollView,
     Dimensions,
     StyleSheet
 } from 'react-native';
@@ -44,10 +45,12 @@ class SignupScreen extends Component {
     render() {
 
         return (
+
+            
             <View style={styles.container}>
-
+                
                 <Image blurRadius={0} source={require('../../assets/images/mainscreen_background.jpg')} style={styles.backgroundImageStyles} />
-
+                <ScrollView>
                 <View style={{
 
                     flex: 1,
@@ -123,7 +126,9 @@ class SignupScreen extends Component {
                             marginTop: height * 0.04
                         }} />
                 </View>
+                </ScrollView>
             </View>
+            
         );
     }
 }

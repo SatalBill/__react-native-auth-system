@@ -41,10 +41,11 @@ class FormInputX extends Component {
                 {
                     this.state.isFontLoaded ? (
 
-                        <FormInput
+                        <FormInput                        
                                 secureTextEntry={this.props.secure || false}
                                 placeholderTextColor={'rgba(255, 255, 255, 0.6)'}
                                 placeholder={this.props.placeholderText}
+                                underlineColorAndroid={'white'}
                                 inputStyle={{
 
                                     color: 'white',

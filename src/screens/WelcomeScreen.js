@@ -5,13 +5,21 @@ import {
     Dimensions,
     StyleSheet
 } from 'react-native';
-
+import { connect } from 'react-redux';
 import { Button } from 'react-native-elements';
 import Ionicons from '@expo/vector-icons/Ionicons';
-
+import { resetApplicationStateHandler } from '../store/actions/asycActionCreator';
 const { height, width } = Dimensions.get('window');
 
 class WelcomeScreen extends Component {
+
+    constructor(props) {
+
+        super(props);
+
+        this.props.navigation
+            .addListener('willFocus', () => this.props.resetApplicationState());
+    }
 
     _navigateToLogin = () => {
 
@@ -97,7 +105,6 @@ const styles = StyleSheet.create({
     backgroundImageStyles: {
 
         position: 'absolute',
-        // top: height * 0.080,
         height: height * 1.0,
         width: width * 1.0
     },
@@ -112,4 +119,12 @@ const styles = StyleSheet.create({
     }
 });
 
-export default WelcomeScreen;
+const mapDispatchToProps = (dispatch) => {
+
+    return {
+
+        resetApplicationState: () => dispatch(resetApplicationStateHandler())
+    };
+};
+
+export default connect(null, mapDispatchToProps)(WelcomeScreen);

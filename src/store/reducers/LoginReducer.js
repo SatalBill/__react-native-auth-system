@@ -70,6 +70,13 @@ const loginReducer = (state = initialState, action) => {
                 buttonLabel: 'Login Up'
             };
 
+        case 'RESET::APPLICATION_DATA':
+
+            return {
+
+                ...initialState
+            };
+
         default:
             return state;
     }

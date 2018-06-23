@@ -1,6 +1,8 @@
-export const asyncActionCreator = () => {
+export const resetApplicationStateHandler = () => {
 
+    // use this action creator for resetting redux store.
     return {
-        action: 'TEST::ACTION_REQUEST'
+
+        type: 'RESET::APPLICATION_DATA'
     };
 };
