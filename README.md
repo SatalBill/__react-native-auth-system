@@ -1,6 +1,6 @@
 # react-native-auth-system
 
-#### This is a ready to use login system app/boilerplate with full redux integration to get your project started.
+#### This is ready to use login system app/boilerplate with full redux integration to get your project started.
 
 #### Note: works best with a Node JS backend.
 
@@ -17,10 +17,10 @@
 ## Demonstration : (click to play)
 
 ### iOS:
-[![iOS-Demo](https://media.giphy.com/media/3mJwqv7HgGStgd3WfS/giphy.gif)](RedirectURL "iOS-Demo")
+[![iOS-Demo](https://media.giphy.com/media/3mJwqv7HgGStgd3WfS/giphy.gif)](https://vimeo.com/276628279 "iOS-Demo")
 
 ### Android: 
-[![Android-Demo](https://media.giphy.com/media/pcKkoKaguHwbtsIqC5/giphy.gif)](RedirectURL "Android-Demo")
+[![Android-Demo](https://media.giphy.com/media/pcKkoKaguHwbtsIqC5/giphy.gif)](https://vimeo.com/276628279 "Android-Demo")
  
 ### View on Expo via QR Code: (click below)
 
