@@ -15,3 +15,25 @@ export const passwordChangedHandler = (passwordValue) => {
         passwordValue
     };
 };
+
+export const initLoadingHandler = () => {
+
+    return {
+
+        type: 'LOGIN_BUTTON::STATE_LOADING_START'
+    };
+};
+
+export const initLoginHandler = (userdata, navigation) => {
+
+    return dispatch => {
+
+        console.log(userdata);
+        
+        setTimeout(() => {
+            
+            dispatch({ type: 'LOGIN_BUTTON::PRESSED' });
+            navigation.navigate('MainScreen');
+        }, 2000);
+    };
+};

@@ -14,6 +14,7 @@ const initialState = {
         isValid: true,
         errorMessage: ''
     },
+    buttonLabel: 'Login',
     isLoading: false
 };
 
@@ -49,6 +50,24 @@ const loginReducer = (state = initialState, action) => {
                     value: action.passwordValue,
                     isValid: formValidation.isPasswordValid(action.passwordValue)
                 }
+            };
+
+        case 'LOGIN_BUTTON::STATE_LOADING_START':
+
+            return {
+
+                ...state,
+                isLoading: true,
+                buttonLabel: 'Loging Up'
+            };
+
+        case 'LOGIN_BUTTON::PRESSED':
+
+            return {
+
+                ...state,
+                isLoading: false,
+                buttonLabel: 'Login Up'
             };
 
         default:

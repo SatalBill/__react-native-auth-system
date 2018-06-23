@@ -130,16 +130,26 @@ const signupDetailsReducer = (state = initialState, action) => {
                         value: action.confirmPasswordValue,
                         isValid: formValidation.doPasswordMatch(state.passwordField.value, action.confirmPasswordValue)
                     }
-                })                
+                }) ,              
             };
 
-        case 'SIGNUP_BUTTON::STATE_LOADING_START':
+
+        case 'SIGNUP_BUTTON::STATE_LOADING_START': 
 
             return {
 
                 ...state,
                 isLoading: true,
-                buttonLabel: 'Signing Up',                
+                buttonLabel: 'Signing Up'
+            };
+
+        case 'SIGNUP_BUTTON::PRESSED': 
+
+            return {
+
+                ...state,
+                isLoading: false,
+                buttonLabel: 'Sign Up' 
             };
 
         default:

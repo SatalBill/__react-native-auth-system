@@ -11,7 +11,10 @@ import { connect } from 'react-redux';
 import { Font } from 'expo';
 import { Button } from 'react-native-elements';
 import FormInput from '../containers/FormInput';
-import { usernameChangedHandler, passwordChangedHandler } from '../store/actions/loginActionCreator';
+import { usernameChangedHandler,
+         passwordChangedHandler,
+         initLoadingHandler,
+         initLoginHandler } from '../store/actions/loginActionCreator';
 
 const { height, width } = Dimensions.get('window');
 
@@ -29,6 +32,14 @@ class LoginScreen extends Component {
             'Nunito': require('../../assets/fonts/Nunito-Regular.ttf'),
         });
         this.setState({ isFontLoaded: true });
+    };
+
+    _loginButtonPressed = () => {
+
+        let { userNameField, passwordField } = this.props.localState;
+
+        this.props.initLoading();
+        this.props.initLogin({ username: userNameField.value, password: passwordField.value}, this.props.navigation);
     };
 
     render() {
@@ -82,9 +93,10 @@ class LoginScreen extends Component {
                     />
                         
                     <Button
-                        title='Loging In'
+                        title='Log In'
+                        onPress={this._loginButtonPressed}
                         large
-                        loading
+                        loading={this.props.localState.isLoading}
                         loadingProps={{ size: 'large', color: 'rgba(111, 202, 186, 1)' }}
                         titleStyle={{ fontWeight: '700' }}
                         buttonStyle={{
@@ -134,6 +146,8 @@ const mapDispatchToProps = (dispatch) => {
 
         usernameChanged: (value) => dispatch(usernameChangedHandler(value)),
         passwordChanged: (value) => dispatch(passwordChangedHandler(value)),
+        initLogin: (userdata, navigation) => dispatch(initLoginHandler(userdata, navigation)),
+        initLoading: () => dispatch(initLoadingHandler())
     };
 };
 

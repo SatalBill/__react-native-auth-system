@@ -75,11 +75,10 @@ export const initSignupHandler = (state, navigation) => {
 
         // action dispatch for demonstration:
         setTimeout(() => {
-            dispatch({
 
-                type: 'SIGNUP_BUTTON::PRESSED'
-            });
+            dispatch({ type: 'SIGNUP_BUTTON::PRESSED' });
             navigation.navigate('MainScreen');
+            
         }, 2000);
 
 
