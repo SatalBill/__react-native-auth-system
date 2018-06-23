@@ -31,11 +31,10 @@ class WelcomeScreen extends Component {
                 <Image blurRadius={0} source={require('../../assets/images/mainscreen_background.jpg')} style={styles.backgroundImageStyles} />                
 
                 <View style={{ flex: 4, alignItems: 'center', justifyContent: 'center', backgroundColor: 'transparent', width: width * 1.0 }}>
-                    <Image blurRadius={0} source={{ uri: 'https://cdn2.iconfinder.com/data/icons/social-media-8/512/Chrome.png' }} style={styles.companyLogoStyles} />                    
+                    <Image blurRadius={0} source={require('../../assets/images/tesla-logo.png')} style={styles.companyLogoStyles} />                    
                 </View>
                 <View style={{
 
-                    // marginTop: height * 0.75,
                     flex: 1,
                     width: width * 1.0,
                     backgroundColor: 'transparent',
@@ -48,7 +47,7 @@ class WelcomeScreen extends Component {
                         title='Login'
                         large
                         iconComponent={Ionicons}
-                        icon={{ name: 'ios-log-in', type: 'ionicon' }}
+                        icon={{ name: 'ios-checkmark', type: 'ionicon' }}
                         titleStyle={{ fontWeight: '700' }}
                         buttonStyle={{
 

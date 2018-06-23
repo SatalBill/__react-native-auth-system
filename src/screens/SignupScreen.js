@@ -58,7 +58,7 @@ class SignupScreen extends Component {
                   {
                       this.state.isFontLoaded ? (
 
-                        <Text style={{ marginTop: height * 0.04, fontFamily: 'Nunito', fontSize: 64, color: 'white' }}>
+                        <Text style={{ marginTop: height * 0.04, fontFamily: 'Nunito', fontSize: 72, color: 'white' }}>
                         Sign up
                         </Text>
                       ) : null

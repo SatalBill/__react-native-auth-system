@@ -59,7 +59,7 @@ class LoginScreen extends Component {
                     {
                         this.state.isFontLoaded ? (
 
-                            <Text style={{ marginTop: height * 0.04, fontFamily: 'Nunito', fontSize: 64, color: 'white' }}>
+                            <Text style={{ marginTop: height * 0.04, fontFamily: 'Nunito', fontSize: 72, color: 'white' }}>
                                 Login
                             </Text>
                         ) : null
@@ -70,6 +70,7 @@ class LoginScreen extends Component {
 
                     flex: 4,
                     width: width * 0.98,
+                    marginTop: height * 0.08,
                     padding: 10,
                     backgroundColor: 'transparent',
                 }}>
