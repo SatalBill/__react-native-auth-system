@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "the-react-native-auth-system",
-    "description": "react native auth system with react native elements",
+    "name": "React Native Auth",
+    "description": "React Native auth system with react native elements",
     "slug": "the-react-native-auth-system",
     "privacy": "public",
     "sdkVersion": "27.0.0",
